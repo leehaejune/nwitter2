@@ -1,8 +1,9 @@
+import AppRouter from "./Router";
 
 function App() {
-  return (
-    <div>App111adaas</div>
-  );
+  
+  return <AppRouter />;
+
 }
 
 export default App;

@@ -1,4 +1,5 @@
-import firebase from "firebase/app";
+import { initializeApp } from "firebase/app";
+import { getAuth } from "firebase/auth";
 
 const firebaseConfig = {
     apiKey: process.env.React_APP_APi_KEY,
@@ -9,4 +10,16 @@ const firebaseConfig = {
     appId: process.env.React_APP_APP_ID,
 };
 
-export default firebase.initializeApp(firebaseConfig);
+
+
+initializeApp(firebaseConfig);
+
+export const auth = getAuth();
+/* 
+
+ firebase 8.0.0 이전
+ import firebase from "firebase/app";
+ firebase.initializeApp(firebaseConfig);
+ export const authService = firebase.auth();
+
+*/
